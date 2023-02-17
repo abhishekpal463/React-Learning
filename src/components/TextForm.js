@@ -33,7 +33,12 @@ export default function TextForm(props) {
       <div className="container my-3">
         <h2>Your Text Summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
         </p>
         <p>{text.length * 0.008} minutes read</p>
         <h2>Preview</h2>
