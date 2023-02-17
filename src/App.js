@@ -17,6 +17,7 @@ function App() {
   };
   return (
     <>
+      <Router>
       <Navbar
         title="TextUtils"
         mode={mode}
@@ -24,7 +25,6 @@ function App() {
         aboutText="About Us"
         toggle={toggleMode}
       />
-      <Router>
         <Routes>
           <Route
             path="/"
